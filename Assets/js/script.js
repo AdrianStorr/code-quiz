@@ -1,4 +1,3 @@
-// TESTING
 
 // Array of objects
 const quiz = [
