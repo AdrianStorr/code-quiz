@@ -101,8 +101,8 @@ function getNewQuestion() {
     }
 
     // questionCounter++
-
 }
+
 // get the result of current attempts
 function getResult() {
     if (disable) return;
