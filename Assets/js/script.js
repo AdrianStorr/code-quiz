@@ -43,11 +43,14 @@ let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
 
-var totalWorkSeconds = 0;
-var totalRestSeconds = 0;
-var secondsElasped = 0;
-var interval;
+var gameTimer = 0;
+var interval= setInterval(function(){
+    gameTimer++;
+    document.getElementById("gameTime").textContent= gameTimer ||''
+},1000);
+
 var disable = false;
+ 
 
 // push question in availableQuestion Array
 // function setAvailableQuestions() {
@@ -59,8 +62,14 @@ var disable = false;
 // }
 // set question number and options
 function getNewQuestion() {
+    var span = document.getElementById("qn");
+    span.textContent = "Question" + (questionCounter + 1) + " of " + availableQuestions.length;
+    var spanTime = document.getElementById("gameTime");
+
+    
     // set question number
-    questionNumber.textContent = "Question" + (questionCounter + 1) + " of " + availableQuestions.length;
+
+
 
     // set question text
     // get random question
@@ -177,12 +186,12 @@ function quizResult() {
     quizBox.classList.add("hide");
     //    show result box
     resultBox.classList.remove("hide");
-
+    clearInterval(interval);
     resultBox.querySelector(".total-question").innerHTML = availableQuestions.length;
     resultBox.querySelector(".total-attempt").innerHTML = attempt;
     resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
     resultBox.querySelector(".total-wrong").innerHTML = availableQuestions.length - correctAnswers;
-    resultBox.querySelector(".time")
+    resultBox.querySelector(".time").textContent=gameTimer
     resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + availableQuestions.length;
 }
 

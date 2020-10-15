@@ -136,7 +136,7 @@ display: inline-block;
   margin: 15px 0;
  }
  .quiz-box .answers-indicator {
-     border-top: 1px solid #cccccc;
+     border-top: 1px solid black;
  }
  .quiz-box .answers-indicator div{
      height: 40px;
@@ -187,4 +187,8 @@ display: inline-block;
  }
  .result-box btn{
      margin-right: 20px;
+ }
+ .right {
+     float: right;
+     color: red;
  }
