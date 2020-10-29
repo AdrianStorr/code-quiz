@@ -15,7 +15,7 @@
         <h3>Instructions:</h3>
         <p>Total number of questions:<span class="total questions">5</span></p>
         <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
-        <button id="startPageHighscore" onclick="showHighscore()">High Scores</button>
+       <a href="./highscore.html"><button>High Scores</button></a> 
     </div>
 
     <div class="quiz-box custom-box hide">
@@ -72,18 +72,14 @@
             <input type="text" size = "40" placeholder="Enter you initials for high score" name="intials" id="initials"/>
             <button id="submitScore">Submit Score</button>
         </div>
-        <div id=highscoreContainer>
+        <div id="highscoreContainer">
         <div id="high-scorePage">
-            <div id="highscore-header">
-                <h3>User Initials</h3>
-                <h3>Score</h3>
-            </div>
-            <div id = "highscore-initials"></div>
-            <div id = "highscore-score"></div>
+            
+            
         </div>
         <div id="endGameBtns">
-            <button id="playAgain" onclick="replayQuiz()">Play Again</button>
-            <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+            <button id="playAgain">Play Again</button>
+            <a href="./index.html"><button>Home</button></a> 
         </div>
     </div>
     </div>

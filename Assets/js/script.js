@@ -257,24 +257,11 @@ submitScoreBtn.addEventListener("click", function highscore(){
     
 });
 
-// This function clears the list for the high scores and generates a new high score list from local storage
-function generateHighscores(){
-    highscoreDisplayName.innerHTML = "";
-    highscoreDisplayScore.innerHTML = "";
-    var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
-    for (i=0; i<highscores.length; i++){
-        var newNameSpan = document.createElement("li");
-        var newScoreSpan = document.createElement("li");
-        newNameSpan.textContent = highscores[i].name;
-        newScoreSpan.textContent = highscores[i].score;
-        highscoreDisplayName.appendChild(newNameSpan);
-        highscoreDisplayScore.appendChild(newScoreSpan);
-    }
-}
+
 
 // This function displays the high scores page while hiding all of the other pages from 
 function showHighscore(){
-    startQuizDiv.style.display = "none"
+    startQuizDiv.style.display = "none";
     gameoverDiv.style.display = "none";
     highscoreContainer.style.display = "flex";
     highscoreDiv.style.display = "block";
